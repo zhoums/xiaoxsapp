@@ -1,0 +1,4 @@
+<!--pages/publish/publish.wxml-->
+<view class="container">
+  <web-view src="https://xshishu.com/app/publish.html?bookId={{book_id}}"></web-view>
+</view>

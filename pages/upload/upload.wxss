@@ -1,0 +1,68 @@
+
+.row_item{ border-bottom: solid 1rpx #d0d0d0; width:100%; font-size:14px;  display: flex; padding: 15px 0; }
+.row_item .label{ min-width: 96px; margin-right: 5px;}
+.upload_btn{
+  width: 80px;
+  height: 80px;
+  border: solid 1px #d0d0d0;
+  /* text-align: center; */
+  display: flex;
+  /* vertical-align: middle; */
+  padding: 0;
+  background: url('https://xshishu.com/app/images/photo_icon.jpg');
+  background-size: contain;
+  
+}
+.regular-checkbox {
+    display: none;
+}
+.checkbar{
+  margin-top: 15px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.btn-main{
+   width:auto; padding:0;border: none; border-radius: 4rem; font-size: 30rpx; text-align: center; color: #fff; background: #fdd35c; box-shadow: 0 4px 0 rgba(253, 211, 92, .5);
+}
+#userCheckbar {
+    margin-right: .4rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 21px;
+    height:21px;
+    border-radius: 1rem;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    color: #fff;
+}
+.checkbar span a {
+    color: #fdd35c;
+}
+.upload_btn text{
+  width: 80%;
+  height: 80%;
+  font-size: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  color:#f0f0f0;
+}
+.upload_btn image{
+  max-height: 100%;
+  width: 100%;
+}
+
+.readCon{ text-align: center; padding: 0 20rpx}
+.readCon image{ height: 250rpx}
+.ic-audition image{ height: 130rpx ; margin-top: 120rpx}
+
+
+.readtasks { position: relative; padding: 1rem 1.5rem; background: #fff; border-radius: .5rem; box-shadow: 0 4px 0 rgba(253, 211, 92, .5); z-index: 99 }
+.grass { position: absolute; bottom: -10rpx; right: 2rem; z-index: 991}
+.grass image{ width: 160rpx; height: 140rpx }
+
+.sec06 { position: relative; padding: 3rem 2rem; margin-bottom: 40rpx; background: #effff5; text-align: center; }
+.sec06 .secBg{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0 }

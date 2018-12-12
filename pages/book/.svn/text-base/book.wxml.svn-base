@@ -1,0 +1,4 @@
+<!--pages/book/book.wxml-->
+<view class="container">
+  <web-view src="https://xshishu.com/app/promise.html"></web-view>
+</view>

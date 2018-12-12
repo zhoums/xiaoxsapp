@@ -1,0 +1,31 @@
+
+<view class="sec06">
+<image src='https://xshishu.com/app/images/bg.jpg' class='secBg'></image>
+	<view class="grass">
+		<image src="../../images/grass.png"></image>
+	</view>
+	<view class="readtasks">
+	小狮书 -- 读好书
+	</view>
+</view>
+
+<view>
+	<view class="record-time">{{recordTime}}</view>
+
+	<view class="flexAbout p40">
+		<view class="pl40 flex readCon ic-audition" bindtap="play">
+			<image src='../../images/ic-audition.png'></image><view>试听</view>
+		</view>
+		<view class="flex2 readCon" wx:if='{{!isRecording}}' bindtap='onStart'>
+			<image src='../../images/ic-play-big.png'></image><view>开始录音</view>
+		</view>
+		<view class="flex2 readCon" wx:if='{{isRecording}}' bindtap='onStart'>
+			<image src='../../images/ic-stop-big.png'></image>
+      <view>停止录音</view>
+		</view>
+		<view class="flex readCon ic-audition" bindtap="upload">
+			<image src='../../images/ic-save.png'></image>
+      <view>保存</view>
+		</view>
+	</view>
+</view> 

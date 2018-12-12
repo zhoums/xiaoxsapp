@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+  <web-view src="https://xshishu.com/app/applogin.html"></web-view>
+</view>

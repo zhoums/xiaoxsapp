@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/read/read",
+    "pages/upload/upload",
+    "pages/login/index",
+    "pages/book/book",
+    "pages/publi",
+    "pages/publish/publish"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

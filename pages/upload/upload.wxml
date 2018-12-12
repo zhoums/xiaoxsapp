@@ -1,0 +1,28 @@
+
+<view class="main_con">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="row_item">
+      <text class="label">书封面或配图</text>
+      <view class="upload_btn" bindtap='selectPH'>
+        <image wx:if="{{hasImg}}" src="{{imagePath}}"></image>
+      </view>
+    </view>
+    <view class="row_item">
+      <text class="label">书名或标题</text>
+      <input placeholder="请输入所读内容的名字"  name="title"></input>
+    </view>
+    <view class="row_item">
+      <text class="label">读书分享</text>
+      <textarea style="height:80px;"  name="share" maxlength='500' placeholder="分享好的句子、好的段落、读书感想等，文字限制500字内"></textarea>
+    </view>
+    <view class="checkbar">
+      <label wx:if="{{!promise}}" id="userCheckbar" bindtap='checkedPRO' for="checkbox-1-1"></label>
+      <icon wx:else type="success" size="23" bindtap='cancelPRO' color="#fdd35c" style='margin-right: .4rem;'/>
+    	<span bindtap='togglePRO'>我已阅读并同意<a href="javascript:;" bindtap='showPromise'>《知识产权承诺》</a></span>
+    </view>
+    <view style='margin-top:30px;'>
+      <button formType="submit" class="btn-main" style='margin-bottom:15px; background-color:#fcd266;color:#fff'>发布</button>
+      <!-- <button formType="reset" style='background-color:#fcd266;color:#fff'>Reset</button> -->
+    </view>
+  </form>
+</view>

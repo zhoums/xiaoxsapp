@@ -1,0 +1,13 @@
+
+.record-time{ text-align: center; font-size: 70rpx}
+.readCon{ text-align: center; padding: 0 20rpx}
+.readCon image{ height: 250rpx}
+.ic-audition image{ height: 130rpx ; margin-top: 120rpx}
+
+
+.readtasks { position: relative; padding: 1rem 1.5rem; background: #fff; border-radius: .5rem; box-shadow: 0 4px 0 rgba(253, 211, 92, .5); z-index: 99 }
+.grass { position: absolute; bottom: -10rpx; right: 2rem; z-index: 991}
+.grass image{ width: 160rpx; height: 140rpx }
+
+.sec06 { position: relative; padding: 3rem 2rem; margin-bottom: 40rpx; background: #effff5; text-align: center; }
+.sec06 .secBg{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0 }
