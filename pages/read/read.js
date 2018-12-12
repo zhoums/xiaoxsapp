@@ -12,6 +12,7 @@ Page({
   onShow: function(options) {
     this.login();
     recorder.recorderManager.onStop((res) => {
+      console.log('res',res)
       this.setData({
         isRecording: false,
         tempFilePath: res.tempFilePath
@@ -50,8 +51,55 @@ Page({
   },
   upload() {
     if (!this.data.isRecording && this.data.tempFilePath) {
-      wx.navigateTo({
-        url: '../upload/upload?unionId=' + app.globalData.form['unionId'],
+      // wx.navigateTo({
+      //   url: '../upload/upload?unionId=' + app.globalData.form['unionId'],
+      // })
+      wx.showLoading({
+        title: '上传中。。。',
+      })
+      wx.uploadFile({
+        url: 'https://xshishu.com/wxapp/book/addBookInfo',
+        filePath: app.globalData.recordUrl,
+        name: 'voiceurl',
+        header: {
+          'content-type': 'multipart/form-data'
+        },
+        formData: '',
+        success: function (res) {
+          let data = JSON.parse(res.data);
+          console.log('dsll',data)
+          app.globalData.bookid = data.result;
+          wx.hideLoading({
+            success: () => {
+              if (data.status == 0) {
+                wx.showToast({
+                  title: '上传成功！',
+                  success: () => {
+                    self.resetGlobalData();
+                    setTimeout(() => {
+                      wx.navigateTo({
+                        url: '../publish/publish'
+                      });
+                    }, 1000)
+                  }
+                })
+              } else {
+                wx.showToast({
+                  title: '上传错误，请重试',
+                  icon: 'none'
+                })
+              }
+            }
+          })
+        },
+        fail: function (err) {
+          wx.hideLoading(() => {
+            wx.showToast({
+              title: '上传错误，请重试',
+              icon: 'none'
+            })
+          })
+        }
       })
     } else {
       wx.showToast({
