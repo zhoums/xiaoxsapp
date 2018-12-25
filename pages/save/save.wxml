@@ -1,0 +1,4 @@
+<!--pages/save/save.wxml-->
+<view class="container">
+  <web-view src="https://xshishu.com/app/appSave.html"  bindmessage="bindmessage"></web-view>
+</view>

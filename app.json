@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/save/save",
     "pages/read/read",
     "pages/upload/upload",
     "pages/login/index",
