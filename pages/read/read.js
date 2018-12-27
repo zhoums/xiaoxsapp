@@ -58,13 +58,12 @@ Page({
         title: '上传中。。。',
       })
       wx.uploadFile({
-        url: 'https://xshishu.com/wxapp/book/addBookInfo',
+        url: 'https://xshishu.com/wxapp/book/addBook',
         filePath: app.globalData.recordUrl,
         name: 'voiceurl',
         header: {
           'content-type': 'multipart/form-data'
         },
-        formData: '',
         success: function (res) {
           let data = JSON.parse(res.data);
           console.log('dsll',data)
