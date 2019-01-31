@@ -10,6 +10,12 @@ Page({
   },
 
   onShow: function(options) {
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+    wx.setKeepScreenOn({
+      keepScreenOn: true,
+    })
     this.login();
     recorder.recorderManager.onStop((res) => {
       console.log('res',res)
@@ -36,6 +42,7 @@ Page({
                 })
                 return;
               }
+              wx.setStorageSync('unionId', response.data.result.unionId);
               app.globalData.form['unionId'] = response.data.result.unionId;
               app.globalData.form['author'] = response.data.result.userName;
               app.globalData.form['description'] = response.data.result.description;
@@ -61,25 +68,27 @@ Page({
         url: 'https://xshishu.com/wxapp/book/addBook',
         filePath: app.globalData.recordUrl,
         name: 'voiceurl',
+        formData: { unionId: app.globalData.form['unionId']},
         header: {
           'content-type': 'multipart/form-data'
         },
         success: function (res) {
           let data = JSON.parse(res.data);
-          console.log('dsll',data)
-          app.globalData.bookid = data.result;
+          console.log('dsll', data, wx.getStorageSync('unionId'))
+          // app.globalData.bookid = data.result;
           wx.hideLoading({
             success: () => {
               if (data.status == 0) {
                 wx.showToast({
                   title: '上传成功！',
                   success: () => {
-                    self.resetGlobalData();
+                    wx.setStorageSync('record', data.result)
+                    //预留提示时间800ms
                     setTimeout(() => {
                       wx.navigateTo({
-                        url: '../publish/publish'
+                        url: '../save/save'
                       });
-                    }, 1000)
+                    }, 800)
                   }
                 })
               } else {

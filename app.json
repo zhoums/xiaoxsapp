@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/save/save",
-    "pages/read/read",
-    "pages/upload/upload",
     "pages/login/index",
+    "pages/read/read",
+    "pages/save/save",
+    "pages/upload/upload",
+    
     "pages/book/book",
     "pages/publi",
     "pages/publish/publish"

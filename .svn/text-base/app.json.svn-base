@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/read/read",
+    "pages/save/save",
     "pages/upload/upload",
     "pages/login/index",
     "pages/book/book",
