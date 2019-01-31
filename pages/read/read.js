@@ -72,6 +72,7 @@ Page({
         header: {
           'content-type': 'multipart/form-data'
         },
+        formData: { unionId:app.globalData.form['unionId']},
         success: function (res) {
           let data = JSON.parse(res.data);
           console.log('dsll', data, wx.getStorageSync('unionId'))
